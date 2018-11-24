@@ -4,7 +4,7 @@ This is a book reviews website.
 Users are able to:
 * Sign in/up
 * Logout
-* Search for books and get information about them.
+* Search for books and get information about them
 * Leave review for a book
 * See reviews made by other people  
 
@@ -13,7 +13,7 @@ Users are able to:
 
 ### Prerequisites & Installing
 
-After you clone this repository, there are several steps to do in order to use it.
+After you clone this repository, there are several steps to do in order to use it:
 
 1. Python, PostgreSQL - if you don't have it yet, get it.
 
@@ -44,8 +44,8 @@ export DATABASE_URL=postgres://czxselkgpvbikt:bd37405781c1311f29d31d25700cfd0ab4
 
 
 ## API
-There's a built in API you can use to fetch information.
-How to use it:
+There's a built in API you can use to fetch information.  
+How to use it:  
 Make a GET request to /api/isbn where isbn is the ISBN of the book and you will get a JSON.  
 Example for the JSON file (/api/0752849190):
 ```
