@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+Search Page
+{% endblock %}
+
+{% block body %}
+<form action="{{ url_for('search') }}" method="post">
+    <div>
+        <label>Search: </label>
+        <input name="search" type="text" placeholder="Type your search here">
+    </div>
+    <button>Submit!</button>
+</form>
+
+<p> {{message}}</p>
+<ul>
+    {% for x in results %}
+    <li> <a href='/isbn/{{x.isbn}}'>
+        {{x.title}} by {{x.author}} in {{x.year}}</li><br>
+        {% endfor %}
+</ul>
+
+{% endblock %}

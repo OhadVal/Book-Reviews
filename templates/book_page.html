@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Books Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static',filename='styles/main.css')}}" />
+
+</head>
+
+<body>
+    <a href="{{ url_for('search') }}">&larr;Go back</a>
+    <h1>{{book.title}}</h1>
+    <div>
+        <ul>
+            <li>
+                <p>ISBN: {{book.isbn}}</p>
+            </li>
+            <li>
+                <p>Author: {{book.author}}</p>
+            </li>
+            <li>
+                <p>Year published: {{book.year}}</p>
+            </li>
+            <li>
+                <p>Rating(from Goodreads): {{goodreads_rating}} ({{goodreads_num_of_ratings}} votes}</p>
+            </li>
+        </ul>
+    </div>
+    <label></label>
+    <p>Your opinion matters! Write a review and share your thoughts on the book:</p>
+    <label></label>
+    <form action="{{ url_for('book_page',isbn=book.isbn) }}" method="post">
+        <div>
+            <textarea name="review_text" placeholder="Remember, be nice!" cols="60" rows="5"></textarea>
+        </div>
+        <label></label>
+        <div>
+            Rating:
+            <input name="rating" type="radio" value="1">1
+            <input name="rating" type="radio" value="2">2
+            <input name="rating" type="radio" value="3">3
+            <input name="rating" type="radio" value="4">4
+            <input name="rating" type="radio" value="5" checked="checked">5
+        </div>
+        <button name="review_btn" value="review">Submit!</button>
+        <p>{{review_message}}</p>
+
+    </form>
+
+    <div>
+        {% if reviews != None %}
+        <h3>Reviews</h3>
+        {% for review in reviews %}
+        <ul>
+            <li>
+                By {{review.username}}:
+                <ul class="inner">
+                    <li>
+                        Rating: {{review.rating}}/5
+                    </li>
+                    <li>
+                        {{review.review}}
+                    </li>
+                    <label></label>
+                </ul>
+            </li>
+        </ul>
+
+        {% endfor %}
+        {% endif %}
+    </div>
+
+    <a href="{{ url_for('book_api',isbn=book.isbn) }}">Go to book API</a>
+</body>
+
+</html>

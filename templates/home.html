@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+{% endblock %}
+
+{% block body %}
+
+<h1>{{message}}</h1>
+
+<div class="container">
+    <div class="login">
+        <form action="{{ url_for('login') }}" method="post">
+            <div> <label>Username: </label> <input type="text" name="username" placeholder="Username"></div>
+            <div><label>Password: </label> <input type="password" name="password" placeholder="Password"></div>
+            <button name="btn" value="login">Submit!</button>
+        </form>
+        <p>{{login_message}}</p>
+    </div>
+
+    <div class="register">
+        <form action="{{ url_for('registration') }}" method="post">
+            <div>
+                <label>Username: </label>
+                <input name="username" type="text" placeholder="Userame">
+            </div>
+
+            <div>
+                <label>Password: </label>
+                <input name="password" type="password" placeholder="Password">
+            </div>
+
+            <div>
+                <label>Verify Password: </label>
+                <input name="verifypassword" type="password" placeholder="Verify Password">
+            </div>
+
+            <div>
+                Gender: 
+                <input name="gender" type="radio" value="m">Male
+                <input name="gender" type="radio" value="f" checked="checked">Female
+            </div>
+
+            <div>
+                Age: 
+                <input name="age" type="number" placeholder="Age" value=18>
+            </div>
+
+            <button name="btn" value="register">Submit!</button>
+
+            <p>{{reg_message}}</p>
+        </form>
+    </div>
+
+</div>
+{% endblock %}
