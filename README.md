@@ -4,9 +4,9 @@ This is a book reviews website.
 Users are able to:
 * Sign in/up
 * Logout
-* Search for books.
-* Leave review for a book.
-* See reviews made by other people.
+* Search for books
+* Leave review for a book
+* See reviews made by other people
 
 
 
@@ -60,5 +60,5 @@ Example for the JSON file:
  }
 ```
   
- ##Acknowledgments
+ ## Acknowledgments
  *CS50's- Brian Yu and David J. Malan.
