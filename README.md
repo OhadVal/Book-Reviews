@@ -2,11 +2,11 @@
 
 This is a book reviews website.
 Users are able to:
-*Sign in/up
-*Logout
-*Search for books.
-*Leave review for a book.
-*See reviews made by other people.
+* Sign in/up
+* Logout
+* Search for books.
+* Leave review for a book.
+* See reviews made by other people.
 
 
 
@@ -38,12 +38,12 @@ export DATABASE_URL=postgres://czxselkgpvbikt:bd37405781c1311f29d31d25700cfd0ab4
 * [Python's Flask](https://github.com/pallets/flask/) - The web framework used.
 * [PostgreSQL](https://www.postgresql.org/) connected with [Heroku](http://heroku.com/) - Database.
 * HTML5, CSS3(SCSS) - Frontend.
-*[Goodreads API](https://www.goodreads.com/api/) - Get review statistics.
+* [Goodreads API](https://www.goodreads.com/api/) - Get review statistics.
 
 
 
 
-##API
+## API
 There's a built in API you can use to fetch information.
 How to use it:
 Make a GET request to /api/<isbn> where isbn is the ISBN of the book and you will get a JSON.
