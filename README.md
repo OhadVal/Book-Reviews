@@ -7,7 +7,8 @@ Users are able to:
 *Search for books.
 *Leave review for a book.
 *See reviews made by other people.
-Every book page contains details about it, and additionally ratings taken from Goodreads API.
+
+
 
 
 ### Prerequisites & Installing
@@ -29,11 +30,17 @@ export DATABASE_URL=postgres://czxselkgpvbikt:bd37405781c1311f29d31d25700cfd0ab4
 ```
 4. Run ``` flask run ``` and you're good to go.
 
+
+
+
 ## Built With
 
-* [Python's Flask](https://github.com/pallets/flask/) - The web framework used
-* [PostgreSQL](https://www.postgresql.org/) connected with [Heroku](http://heroku.com/) - Database
-* HTML5, CSS3(SCSS) - Frontend
+* [Python's Flask](https://github.com/pallets/flask/) - The web framework used.
+* [PostgreSQL](https://www.postgresql.org/) connected with [Heroku](http://heroku.com/) - Database.
+* HTML5, CSS3(SCSS) - Frontend.
+*[Goodreads API](https://www.goodreads.com/api/) - Get review statistics.
+
+
 
 
 ##API
