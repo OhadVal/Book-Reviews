@@ -59,3 +59,6 @@ Example for the JSON file:
   "Year":	"1999"
  }
 ```
+  
+ ##Acknowledgments
+ *CS50's- Brian Yu and David J. Malan.
