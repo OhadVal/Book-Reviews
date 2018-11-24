@@ -61,4 +61,4 @@ Example for the JSON file:
 ```
   
  ## Acknowledgments
- *CS50's- Brian Yu and David J. Malan.
+ * CS50's- Brian Yu and David J. Malan.
